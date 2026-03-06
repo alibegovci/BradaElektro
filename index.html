@@ -1,280 +1,6 @@
 <!DOCTYPE html>
 <html lang="hr">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Lavandula Soniae</title>
-<style>
-  body {
-    background-image: url('images/lavanda.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    font-family: Arial, sans-serif;
-    color: white;
-    margin: 0;
-    padding: 0;
-    scroll-behavior: smooth;
-  }
-
-  header {
-    text-align: center;
-    margin-bottom: 20px;
-    padding: 20px;
-  }
-
-  header img.logo {
-    width: 120px;
-    height: auto;
-    border-radius: 10px;
-  }
-
-  h1 {
-    margin-top: 10px;
-    color: white;
-  }
-
-  p {
-    max-width: 900px;
-    margin: 0 auto 20px auto;
-    padding: 0 10px;
-    line-height: 1.5;
-    text-align: center;
-  }
-
-  .gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
-    gap: 15px;
-    justify-items: center;
-    margin: 20px auto 40px auto;
-    max-width: 900px;
-    padding: 0 10px;
-  }
-
-  .gallery img {
-    width: 3cm;
-    height: 3cm;
-    object-fit: cover;
-    border-radius: 8px;
-    box-shadow: 0 0 5px rgba(0,0,0,0.1);
-    cursor: pointer;
-    transition: transform 0.3s;
-  }
-
-  .gallery img:hover {
-    transform: scale(1.05);
-  }
-
-  /* Lightbox overlay */
-  #lightbox {
-    display: none;
-    position: fixed;
-    z-index: 10000;
-    top: 0; left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.8);
-    justify-content: center;
-    align-items: center;
-  }
-  #lightbox img {
-    max-width: 90%;
-    max-height: 90%;
-    border-radius: 12px;
-    box-shadow: 0 0 20px rgba(255,255,255,0.2);
-  }
-
-  .contact {
-    background: transparent;
-    padding: 20px;
-    border-radius: 10px;
-    max-width: 400px;
-    margin: auto;
-    margin-bottom: 40px;
-    font-size: 1.1rem;
-    line-height: 1.5;
-    color: white;
-    text-align: center;
-  }
-
-  .contact strong {
-    color: white;
-  }
-
-  .contact a {
-    color: white;
-    text-decoration: none;
-  }
-
-  .contact a:hover {
-    text-decoration: underline;
-  }
-
-  .whatsapp-button {
-    display: inline-block;
-    margin-top: 15px;
-    background-color: #25D366;
-    color: white;
-    padding: 12px 20px;
-    font-size: 1.1rem;
-    border-radius: 25px;
-    text-decoration: none;
-    font-weight: bold;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
-    transition: background-color 0.3s ease;
-  }
-  .whatsapp-button:hover {
-    background-color: #1ebe57;
-  }
-
-  #download {
-    text-align: center;
-    padding: 40px 20px;
-    background: rgba(0,0,0,0.4);
-    margin-top: 40px;
-  }
-
-  .download a {
-    display: inline-block;
-    margin: 10px;
-    padding: 12px 20px;
-    background: #28a745;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background 0.3s;
-    font-weight: bold;
-  }
-
-  .download a:hover {
-    background: #218838;
-  }
-
-  nav {
-    position: fixed;
-    top:0; left:0; right:0;
-    background: rgba(0,0,0,0.6);
-    display:flex; justify-content:center; z-index:1000;
-    flex-wrap: wrap;
-  }
-  nav a {
-    color:white; text-decoration:none; padding:10px 15px; display:inline-block; transition: background 0.3s;
-    font-size: 0.9rem;
-  }
-  nav a:hover { background: rgba(255,255,255,0.2); }
-
-  /* Responsivnost za mobilne */
-  @media (max-width: 600px) {
-    body {
-      background-attachment: scroll;
-      background-size: cover;
-    }
-
-    header img.logo {
-      width: 90px;
-    }
-
-    .gallery img {
-      width: 70px;
-      height: 70px;
-    }
-
-    .download a {
-      padding: 10px 15px;
-      font-size: 0.9rem;
-    }
-
-    p {
-      padding: 0 5px;
-      font-size: 0.95rem;
-    }
-
-    nav a {
-      padding: 8px 10px;
-      font-size: 0.85rem;
-    }
-  }
-</style>
-</head>
-<body>
-
-<nav>
-  <a href="#header">Početna</a>
-  <a href="#galerija">Galerija</a>
-  <a href="#download">Download</a>
-  <a href="#kontakt">Kontakt</a>
-</nav>
-
-<header id="header">
-  <img src="images/logo.png" alt="Sonjina Lavanda Logo" class="logo" />
-  <h1>Sonjina Lavanda</h1>
-</header>
-[06.03.2026 10:45] Ant Jak: <p>
-  Lavanda sapun naš je prirodni proizvod ručno izrađen od najfinijeg maslinovog ulja i čistog eteričnog ulja lavande. Nježno čisti kožu, njeguje je i ostavlja umirujući miris koji opušta tijelo i um. Idealan je za svakodnevnu upotrebu, posebno za suhu i osjetljivu kožu. Uživajte u daru prirode i osjetite istinsku svježinu Dalmacije u svakom pranju.
-</p>
-
-<section class="gallery" id="galerija">
-  <img src="images/slika1.jpg" alt="Lavanda 1" onclick="openLightbox(this.src)" />
-  <img src="images/slika2.jpg" alt="Lavanda 2" onclick="openLightbox(this.src)" />
-  <img src="images/slika3.jpg" alt="Lavanda 3" onclick="openLightbox(this.src)" />
-  <img src="images/slika4.jpg" alt="Lavanda 4" onclick="openLightbox(this.src)" />
-  <img src="images/slika5.jpg" alt="Lavanda 5" onclick="openLightbox(this.src)" />
-</section>
-
-<section id="download">
-  <h2>Download</h2>
-  <p>Preuzmite tekstualnu datoteku i slike:</p>
-  <a href="files/informacije.txt" download>Preuzmi tekst</a>
-  <a href="images/slika1.jpg" download>Preuzmi sliku 1</a>
-  <a href="images/slika2.jpg" download>Preuzmi sliku 2</a>
-  <a href="images/slika3.jpg" download>Preuzmi sliku 3</a>
-  <a href="images/slika4.jpg" download>Preuzmi sliku 4</a>
-  <a href="images/slika5.jpg" download>Preuzmi sliku 5</a>
-</section>
-
-<section class="contact" id="kontakt">
-  <p><strong>Telefon:</strong> +387 63 844 452</p>
-  <p><strong>Email:</strong> <a href="mailto:lavandula.soniae@hotmail.com">lavandula.soniae@hotmail.com</a></p>
-  <a href="https://wa.me/38763844452?text=Pozdrav%20Sonja%2C%20zanima%20me%20vaš%20lavanda%20sapun." target="_blank" rel="noopener noreferrer" class="whatsapp-button" aria-label="Pošalji poruku na WhatsApp">
-    Kontaktirajte nas na WhatsApp
-  </a>
-</section>
-
-<div id="lightbox" onclick="closeLightbox()">
-  <img src="" alt="Povećana slika" />
-</div>
-
-<script>
-  function openLightbox(src) {
-    document.querySelector('#lightbox img').src = src;
-    document.getElementById('lightbox').style.display = 'flex';
-  }
-
-  function closeLightbox() {
-    document.getElementById('lightbox').style.display = 'none';
-  }
-</script>
-
-<!-- Tawk.to -->
-<script type="text/javascript">
-var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-(function(){
-var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-s1.async=true;
-s1.src='https://embed.tawk.to/TVOJ_ID/1abcdxyz'; // zamijeni svojim ID-om
-s1.charset='UTF-8';
-s1.setAttribute('crossorigin','*');
-s0.parentNode.insertBefore(s1,s0);
-})();
-</script>
-
-</body>
-</html>
-[06.03.2026 10:52] Ant Jak: <!DOCTYPE html>
-<html lang="hr">
-<head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Brada Elektro</title>
@@ -285,8 +11,7 @@ s0.parentNode.insertBefore(s1,s0);
     font-family: Arial, sans-serif;
     scroll-behavior: smooth;
     color: white;
-    background: url('images/instalacija1.jpg') no-repeat center center fixed;
-    background-size: cover;
+    background: #000; /* fallback boja */
   }
 
   nav {
@@ -308,22 +33,30 @@ s0.parentNode.insertBefore(s1,s0);
   }
   nav a:hover { background: rgba(255,255,255,0.2); }
 
+  /* Header s proporcionalnom slikom */
   header {
-    padding:40px 20px;
-    text-align:center;
-    min-height:100vh;
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
+    position: relative;
+    width: 100%;
     background: rgba(0,0,0,0.4) url('images/instalacija1.jpg') no-repeat center center;
-    background-size: cover;
+    background-size: contain;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 56.25%; /* omjer 16:9, može se promijeniti po potrebi */
   }
-  header h1 { margin:0 0 10px; font-size:3em; }
-  header p { margin:0; font-size:1.2em; }
+  header h1, header p {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    margin: 0;
+  }
+  header h1 { top: 30%; font-size: 3em; }
+  header p { top: 45%; font-size: 1.2em; }
 
   section {
     padding:40px 20px;
-    min-height:100vh;
     display:flex;
     flex-direction:column;
     align-items:center;
@@ -382,13 +115,12 @@ s0.parentNode.insertBefore(s1,s0);
   }
   #lightboxOverlay img { max-width:90%; max-height:90%; border-radius:5px; }
 
-  /* RESPONSIVNOST ZA MOBILNE */
   @media (max-width: 768px) {
     header h1 { font-size:2em; }
     header p { font-size:1rem; }
     .gallery img { width:200px; }
     nav a { padding:8px 12px; font-size:0.8rem; }
-    section { padding:20px 10px; min-height:auto; }
+    section { padding:20px 10px; }
   }
   @media (max-width: 480px) {
     header h1 { font-size:1.5em; }
@@ -455,19 +187,19 @@ s0.parentNode.insertBefore(s1,s0);
 </div>
 
 <script>
-  const lightbox = document.getElementById('lightboxOverlay');
-  const lightboxImg = lightbox.querySelector('img');
+const lightbox = document.getElementById('lightboxOverlay');
+const lightboxImg = lightbox.querySelector('img');
 
-  document.querySelectorAll('.gallery img').forEach(img => {
-    img.addEventListener('click', () => {
-      lightboxImg.src = img.src;
-      lightbox.style.display = 'flex';
-    });
+document.querySelectorAll('.gallery img').forEach(img => {
+  img.addEventListener('click', () => {
+    lightboxImg.src = img.src;
+    lightbox.style.display = 'flex';
   });
+});
 
-  lightbox.addEventListener('click', () => {
-    lightbox.style.display = 'none';
-  });
+lightbox.addEventListener('click', () => {
+  lightbox.style.display = 'none';
+});
 </script>
 
 </body>
