@@ -42,18 +42,17 @@
     text-align: center;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    padding-top: 56.25%; /* omjer 16:9, može se promijeniti po potrebi */
+    justify-content: flex-end; /* tekst ide ispod loga */
+    padding-bottom: 20%; /* udaljenost teksta od dna headera */
+    padding-top: 10%; /* odmak od vrha ako treba */
   }
   header h1, header p {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
     color: white;
     margin: 0;
+    padding: 0 10px;
   }
-  header h1 { top: 30%; font-size: 3em; }
-  header p { top: 45%; font-size: 1.2em; }
+  header h1 { font-size: 3em; }
+  header p { font-size: 1.2em; margin-top:10px; }
 
   section {
     padding:40px 20px;
