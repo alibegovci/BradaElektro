@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html lang="hr">
 <head>
-<title>Brada Elektro</title>
 <meta charset="UTF-8">
+<title>Brada Elektro</title>
 <style>
 /* Reset i font */
 body, html { margin:0; padding:0; font-family: Arial, sans-serif; scroll-behavior: smooth; }
@@ -26,7 +26,7 @@ nav a {
 }
 nav a:hover { background: rgba(255,255,255,0.2); }
 
-/* Header sa smanjenom pozadinskom slikom */
+/* Header */
 header {
   padding:40px 20px;
   text-align:center;
@@ -37,8 +37,6 @@ header {
   background: rgba(0,0,0,0.4) url('images/instalacija1.jpg') no-repeat center center;
   background-size: 80%;
 }
-
-/* Header tekst */
 header h1 { margin:0 0 10px; font-size:3em; }
 header p { margin:0; font-size:1.2em; }
 
@@ -54,6 +52,9 @@ section h2 { margin-bottom:20px; }
 /* Kontakt i download dugmad */
 .contact a, .download a { display:inline-block; margin:10px; padding:10px 20px; background:#28a745; color:white; text-decoration:none; border-radius:5px; transition: background 0.3s; }
 .contact a:hover, .download a:hover { background:#218838; }
+
+/* Download sekcija dodatno */
+.download { text-align:center; padding:40px 20px; }
 
 /* Footer */
 footer { background:rgba(0,0,0,0.6); color:white; padding:20px; text-align:center; }
@@ -84,44 +85,46 @@ footer { background:rgba(0,0,0,0.6); color:white; padding:20px; text-align:cente
 </nav>
 
 <header id="header">
-<h1>Brada Elektro</h1>
-<p>Elektro instalacije i servis</p>
+  <h1>Brada Elektro</h1>
+  <p>Elektro instalacije i servis</p>
 </header>
 
 <section id="usluge">
-<h2>Naše usluge</h2>
-<p>Instalacije, popravci, održavanje električnih uređaja.</p>
+  <h2>Naše usluge</h2>
+  <p>Instalacije, popravci, održavanje električnih uređaja.</p>
 </section>
 
 <section class="gallery" id="galerija">
-<h2>Galerija radova</h2>
-<img src="images/instalacija2.jpg" alt="Instalacija 2">
-<img src="images/instalacija3.jpg" alt="Instalacija 3">
+  <h2>Galerija radova</h2>
+  <img src="images/instalacija1.jpg" alt="Instalacija 1">
+  <img src="images/instalacija2.jpg" alt="Instalacija 2">
+  <img src="images/instalacija3.jpg" alt="Instalacija 3">
 </section>
 
 <section id="onama">
-<h2>O nama</h2>
-<p>Brada Elektro je obiteljska firma s dugogodišnjim iskustvom u elektroinstalacijama i servisu električnih uređaja. Naš tim pruža profesionalne usluge i jamči kvalitetu.</p>
+  <h2>O nama</h2>
+  <p>Brada Elektro je obiteljska firma s dugogodišnjim iskustvom u elektroinstalacijama i servisu električnih uređaja. Naš tim pruža profesionalne usluge i jamči kvalitetu.</p>
 </section>
 
 <section id="download" class="download">
-<h2>Download</h2>
-<p>Preuzmite našu tekstualnu datoteku s informacijama o firmi:</p>
-<a href="files/informacije.txt" download>Preuzmi informacije</a>
-</section>
+  <h2>Download</h2>
+  <p>Preuzmite našu tekstualnu datoteku s informacijama o firmi:</p>
+  <a href="files/informacije.txt" download>Preuzmi informacije</a>
 
-  <p>Preuzmite sliku iz galerije:</p>
-<a href="images/instalacija2.jpg" download=instalacija2.jpg>Preuzmi instalacija2.jpg</a>
+  <p>Preuzmite slike iz galerije:</p>
+  <a href="images/instalacija1.jpg" download>Preuzmi instalacija1.jpg</a>
+  <a href="images/instalacija2.jpg" download>Preuzmi instalacija2.jpg</a>
+  <a href="images/instalacija3.jpg" download>Preuzmi instalacija3.jpg</a>
 </section>
 
 <section class="contact" id="kontakt">
-<h2>Kontakt</h2>
-<p>Email: <a href="mailto:info@bradaelektro.com">info@bradaelektro.com</a></p>
-<a href="https://wa.me/+38763092464" target="_blank">WhatsApp</a>
+  <h2>Kontakt</h2>
+  <p>Email: <a href="mailto:info@bradaelektro.com">info@bradaelektro.com</a></p>
+  <a href="https://wa.me/+38763092464" target="_blank">WhatsApp</a>
 </section>
 
 <footer>
-<p>&copy; 2026 Brada Elektro</p>
+  <p>&copy; 2026 Brada Elektro</p>
 </footer>
 
 <!-- Lightbox overlay -->
@@ -129,7 +132,7 @@ footer { background:rgba(0,0,0,0.6); color:white; padding:20px; text-align:cente
   <img src="" alt="Povećana slika">
 </div>
 
-<script>
+  <script>
 const lightbox = document.getElementById('lightboxOverlay');
 const lightboxImg = lightbox.querySelector('img');
 
@@ -146,8 +149,4 @@ lightbox.addEventListener('click', () => {
 </script>
 
 </body>
-
 </html>
-
-
-
